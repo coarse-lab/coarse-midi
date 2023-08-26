@@ -15,7 +15,7 @@ export default function App() {
 	const { width, height } = terminalSize;
 
 	return (
-		<Section.Column borderStyle="single" width={width} height={height}>
+		<Section.Column borderStyle="single" width={width} height={height * 0.6}>
 			<Header />
 			<Section.Row >
 				<FilesList path={midiFilesDirectory} />

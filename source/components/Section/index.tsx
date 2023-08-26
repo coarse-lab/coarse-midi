@@ -16,19 +16,19 @@ interface ISectionProps {
 	bold?: boolean;
 }
 
-export const Text: React.FC<ISectionProps> = ({ children, color = "green", ...style }) => (
+export const Text: React.FC<ISectionProps> = ({ children, color = "blue", ...style }) => (
 	<InkText {...style as any} color={color}>
 		{children}
 	</InkText>
 );
 
-const Row: React.FC<ISectionProps> = ({ children, borderColor = "green", col, ...style }) => (
+const Row: React.FC<ISectionProps> = ({ children, borderColor = "blue", col, ...style }) => (
 	<Box flexDirection={col ? "column" : "row"} {...style as any} borderColor={borderColor}>
 		{children}
 	</Box>
 );
 
-const Column: React.FC<ISectionProps> = ({ children, borderColor = "green", ...style }) => (
+const Column: React.FC<ISectionProps> = ({ children, borderColor = "blue", ...style }) => (
 	<Row col {...style} borderColor={borderColor}>
 		{children}
 	</Row>
